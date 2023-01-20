@@ -7,18 +7,25 @@
 body {
   background-color: #09090A;
   color: white;
+  height: 100vh;
 }
 header{
   display: flex;
-  align-items: row;
+  align-items: center;
   justify-content: space-between;
+
   padding: 48px;
+
+  position: fixed;
+  width: 100%;
+  background-color: #09090a;
+
 }
 button{
   padding: 16px 24px;
   border-radius: 8px;
   border: 1px solid #8B5CF6;
-  background-color: #09090A;
+  background-color: transparent;
   color: white;
 
   display: flex;
@@ -28,6 +35,54 @@ button{
   font-family: 'Inter';
   font-weight: 600;
   font-size: 16px;
+  line-height: 125%;
+}
+
+#form-habits{
+  display: flex;
+
+  padding: 182px 48px 48px;
+  width: fit-content;
+}
+
+.habits{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.habit{
+  width: 64px;
+  height: 64px;
+
+  font-size: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.days{
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+.day{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.day div{
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 125%;
+
+  color: #a1a1a1;
+  font-family: 'Roboto Mono';
+
 }
 
 input{
@@ -48,45 +103,8 @@ input:checked{
   border: 2px solid #A78BFA;
 }
 
-#form-habits{
-  display: flex;
-  padding: 0 48px;
-}
-
-.habit{
-  width: 64px;
-  height: 64px;
-
-  font-size: 32px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.habits{
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-
-  gap: 24px;
-}
-.days{
-  display: flex;
-  gap: 48px;
-  margin-left: 48px;
-}
-.day{
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-.day div{
-  margin-bottom: 8px;
-  font-size: 20px;
-  line-height: 125%;
-
-  color: #a1a1a1;
-  font-family: 'Roboto Mono';
-
+@media (max-width: 570px){
+  button div{
+    display: none;
+  }
 }
